@@ -1,6 +1,7 @@
 name: Dev env workflow
 
-on: [push]
+on:
+  push:
 
 jobs:
   Test:
