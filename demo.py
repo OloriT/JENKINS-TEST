@@ -2,6 +2,8 @@ name: Dev env workflow
 
 on:
   push:
+    branches:
+      - dev
 
 jobs:
   Test:
