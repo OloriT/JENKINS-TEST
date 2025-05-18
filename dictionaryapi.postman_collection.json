@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "293fc550-222e-4a6f-a24e-efd086651b0a",
+		"name": "DictionaryApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20842590"
+	},
+	"item": [
+		{
+			"name": "dictionary-api",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name should have an OK string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dictionaryapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v2",
+						"entries",
+						"en",
+						":word"
+					],
+					"variable": [
+						{
+							"key": "word",
+							"value": "{{$randomWord}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "dictionary-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dictionaryapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"v2",
+								"entries",
+								"en",
+								":word"
+							],
+							"variable": [
+								{
+									"key": "word",
+									"value": "{{$randomWord}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Aug 2023 18:13:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "450"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "446"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1691691236"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ecd-qfx9QXty968Zez5VaYpbmPId5mE\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"plains\",\n        \"phonetic\": \"/pleɪnz/\",\n        \"phonetics\": [\n            {\n                \"text\": \"/pleɪnz/\",\n                \"audio\": \"https://api.dictionaryapi.dev/media/pronunciations/en/plains-us.mp3\",\n                \"sourceUrl\": \"https://commons.wikimedia.org/w/index.php?curid=2100819\",\n                \"license\": {\n                    \"name\": \"BY-SA 3.0\",\n                    \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n                }\n            }\n        ],\n        \"meanings\": [\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A land area free of woodland, cities, and towns; open country.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"There are several species of wild flowers growing in this field.\"\n                    },\n                    {\n                        \"definition\": \"A wide, open space that is usually used to grow crops or to hold farm animals.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"A crop circle was made in a corn field.\"\n                    },\n                    {\n                        \"definition\": \"A place where competitive matches are carried out.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"Any of various figurative meanings, regularly dead metaphors.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [\n                    \"course\",\n                    \"court\",\n                    \"ground\",\n                    \"pitch\",\n                    \"area\",\n                    \"domain\",\n                    \"realm\",\n                    \"sphere\",\n                    \"box\",\n                    \"input field\"\n                ],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A lamentation.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"verb\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"To complain.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"To lament, bewail.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"to plain a loss\"\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"An expanse of land with relatively low relief, usually exclusive of forests, deserts, and wastelands.\",\n                        \"synonyms\": [\n                            \"flatland\",\n                            \"grassland\"\n                        ],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [\n                    \"flatland\",\n                    \"grassland\"\n                ],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"verb\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"To level; to raze; to make plain or even on the surface.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"To make plain or manifest; to explain.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A level or flat surface.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A flat surface extending infinitely in all directions (e.g. horizontal or vertical plane).\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A level of existence or development. (eg, astral plane)\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A roughly flat, thin, often moveable structure used to create lateral force by the flow of air or water over its surface, found on aircraft, submarines, etc.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(Unicode) Any of a number of designated ranges of sequential code points.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"An imaginary plane which divides the body into two portions.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A tool for smoothing wood by removing thin layers from the surface.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"An airplane; an aeroplane.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"Any of various nymphalid butterflies, of various genera, having a slow gliding flight. Also called aeroplanes.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"The butterfly Bindahara phocides, family Lycaenidae, of Asia and Australasia.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A deciduous tree of the genus Platanus.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(Northern UK) A sycamore.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            }\n        ],\n        \"license\": {\n            \"name\": \"CC BY-SA 3.0\",\n            \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n        },\n        \"sourceUrls\": [\n            \"https://en.wiktionary.org/wiki/field\",\n            \"https://en.wiktionary.org/wiki/plain\",\n            \"https://en.wiktionary.org/wiki/plains\",\n            \"https://en.wiktionary.org/wiki/plane\"\n        ]\n    }\n]"
+				},
+				{
+					"name": "dictionary-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dictionaryapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"v2",
+								"entries",
+								"en",
+								":word"
+							],
+							"variable": [
+								{
+									"key": "word",
+									"value": "{{$randomWord}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Aug 2023 18:15:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "492"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "450"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "448"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1691691536"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ec-64/FCQdu+9I1SzGqTExNyh8700E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"quantifying\",\n        \"phonetics\": [],\n        \"meanings\": [\n            {\n                \"partOfSpeech\": \"verb\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"To assign a quantity to.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"To determine the value of (a variable or expression).\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [\n                    \"quantitate\"\n                ],\n                \"antonyms\": []\n            }\n        ],\n        \"license\": {\n            \"name\": \"CC BY-SA 3.0\",\n            \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n        },\n        \"sourceUrls\": [\n            \"https://en.wiktionary.org/wiki/quantify\",\n            \"https://en.wiktionary.org/wiki/quantifying\"\n        ]\n    }\n]"
+				},
+				{
+					"name": "dictionary-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dictionaryapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"v2",
+								"entries",
+								"en",
+								":word"
+							],
+							"variable": [
+								{
+									"key": "word",
+									"value": "{{$randomWord}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Aug 2023 18:15:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "450"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "447"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1691691536"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9ef-Hly0nF1nVFpbUhyhZ13QZTpJ5rA\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"function\",\n        \"phonetic\": \"/ˈfʌŋ(k)ʃən/\",\n        \"phonetics\": [\n            {\n                \"text\": \"/ˈfʌŋ(k)ʃən/\",\n                \"audio\": \"\"\n            },\n            {\n                \"text\": \"/ˈfʌŋkʃən/\",\n                \"audio\": \"https://api.dictionaryapi.dev/media/pronunciations/en/function-us.mp3\",\n                \"sourceUrl\": \"https://commons.wikimedia.org/w/index.php?curid=1762944\",\n                \"license\": {\n                    \"name\": \"BY-SA 3.0\",\n                    \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n                }\n            }\n        ],\n        \"meanings\": [\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"What something does or is used for.\",\n                        \"synonyms\": [\n                            \"aim\",\n                            \"intention\",\n                            \"purpose\",\n                            \"role\",\n                            \"use\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A professional or official position.\",\n                        \"synonyms\": [\n                            \"occupation\",\n                            \"office\",\n                            \"part\",\n                            \"role\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"An official or social occasion.\",\n                        \"synonyms\": [\n                            \"affair\",\n                            \"occasion\",\n                            \"social function\",\n                            \"social occasion\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"Something which is dependent on or stems from another thing; a result or concomitant.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A relation where one thing is dependent on another for its existence, value, or significance.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A relation in which each element of the domain is associated with exactly one element of the codomain.\",\n                        \"synonyms\": [\n                            \"map\",\n                            \"mapping\",\n                            \"mathematical function\",\n                            \"operator\",\n                            \"transformation\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A routine that receives zero or more arguments and may return a result.\",\n                        \"synonyms\": [\n                            \"func\",\n                            \"funct\",\n                            \"procedure\",\n                            \"routine\",\n                            \"subprogram\",\n                            \"subroutine\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"The physiological activity of an organ or body part.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"The characteristic behavior of a chemical compound.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"The role of a social practice in the continued existence of the group.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [\n                    \"affair\",\n                    \"occasion\",\n                    \"social function\",\n                    \"social occasion\",\n                    \"aim\",\n                    \"intention\",\n                    \"purpose\",\n                    \"role\",\n                    \"use\",\n                    \"func\",\n                    \"funct\",\n                    \"procedure\",\n                    \"routine\",\n                    \"subprogram\",\n                    \"subroutine\",\n                    \"map\",\n                    \"mapping\",\n                    \"mathematical function\",\n                    \"operator\",\n                    \"transformation\",\n                    \"occupation\",\n                    \"office\",\n                    \"part\",\n                    \"role\"\n                ],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"verb\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"To have a function.\",\n                        \"synonyms\": [\n                            \"officiate\",\n                            \"serve\"\n                        ],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"To carry out a function; to be in action.\",\n                        \"synonyms\": [\n                            \"go\",\n                            \"operate\",\n                            \"run\",\n                            \"work\"\n                        ],\n                        \"antonyms\": [\n                            \"malfunction\"\n                        ]\n                    }\n                ],\n                \"synonyms\": [\n                    \"go\",\n                    \"operate\",\n                    \"run\",\n                    \"work\",\n                    \"officiate\",\n                    \"serve\"\n                ],\n                \"antonyms\": [\n                    \"malfunction\"\n                ]\n            }\n        ],\n        \"license\": {\n            \"name\": \"CC BY-SA 3.0\",\n            \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n        },\n        \"sourceUrls\": [\n            \"https://en.wiktionary.org/wiki/function\"\n        ]\n    }\n]"
+				},
+				{
+					"name": "dictionary-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dictionaryapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"v2",
+								"entries",
+								"en",
+								":word"
+							],
+							"variable": [
+								{
+									"key": "word",
+									"value": "{{$randomWord}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Aug 2023 18:15:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "450"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "446"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1691691536"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"959-g/+xgku6TdKsUDROGBu49P4KKjY\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"road\",\n        \"phonetic\": \"/ɹəʊd/\",\n        \"phonetics\": [\n            {\n                \"text\": \"/ɹəʊd/\",\n                \"audio\": \"https://api.dictionaryapi.dev/media/pronunciations/en/road-uk.mp3\",\n                \"sourceUrl\": \"https://commons.wikimedia.org/w/index.php?curid=9014215\",\n                \"license\": {\n                    \"name\": \"BY 3.0 US\",\n                    \"url\": \"https://creativecommons.org/licenses/by/3.0/us\"\n                }\n            },\n            {\n                \"text\": \"/ɹoʊd/\",\n                \"audio\": \"https://api.dictionaryapi.dev/media/pronunciations/en/road-us.mp3\",\n                \"sourceUrl\": \"https://commons.wikimedia.org/w/index.php?curid=188093\",\n                \"license\": {\n                    \"name\": \"BY-SA 3.0\",\n                    \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n                }\n            }\n        ],\n        \"meanings\": [\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A way used for travelling between places, originally one wide enough to allow foot passengers and horses to travel, now (US) usually one surfaced with asphalt or concrete and designed to accommodate many vehicles travelling in both directions. In the UK both senses are heard: a country road is the same as a country lane.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A road; or particularly a car, as a means of transportation.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"We travelled to the seaside by road.\"\n                    },\n                    {\n                        \"definition\": \"A path chosen in life or career.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"An underground tunnel in a mine.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A railway or a single railway track.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"The act of riding on horseback.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A hostile ride against a particular area; a raid.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(often in the plural) A partly sheltered area of water near a shore in which vessels may ride at anchor; a roadstead.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A journey, or stage of a journey.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A way or route.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"adjective\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"At the venue of the opposing team or competitor; on the road.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(Slang) Having attributes, primarily masculine, suggesting a tendency towards minor crime. Usually used by youths endearingly; glorifying crime.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [\n                    \"away\"\n                ],\n                \"antonyms\": []\n            }\n        ],\n        \"license\": {\n            \"name\": \"CC BY-SA 3.0\",\n            \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n        },\n        \"sourceUrls\": [\n            \"https://en.wiktionary.org/wiki/road\"\n        ]\n    }\n]"
+				},
+				{
+					"name": "dictionary-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dictionaryapi.dev/api/v2/entries/en/:word",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dictionaryapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"v2",
+								"entries",
+								"en",
+								":word"
+							],
+							"variable": [
+								{
+									"key": "word",
+									"value": "{{$randomWord}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 10 Aug 2023 18:16:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.20.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "450"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "443"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1691691536"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8fd-c7akpINMPlRDtcGxWQFlXmwBDig\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"word\": \"factors\",\n        \"phonetic\": \"/ˈfæktəz/\",\n        \"phonetics\": [\n            {\n                \"text\": \"/ˈfæktəz/\",\n                \"audio\": \"\"\n            },\n            {\n                \"text\": \"/ˈfæktɚz/\",\n                \"audio\": \"\"\n            }\n        ],\n        \"meanings\": [\n            {\n                \"partOfSpeech\": \"noun\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"A doer, maker; a person who does things for another person or organization.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"The factor of the trading post bought the furs.\"\n                    },\n                    {\n                        \"definition\": \"An agent or representative.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A commission agent.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A person or business organization that provides money for another's new business venture; one who finances another's business.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A business organization that lends money on accounts receivable or buys and collects accounts receivable.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"One of the elements, circumstances, or influences which contribute to produce a result.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"The economy was a factor in this year's budget figures.\"\n                    },\n                    {\n                        \"definition\": \"Any of various objects multiplied together to form some whole.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"3 is a factor of 12, as are 2, 4 and 6.\"\n                    },\n                    {\n                        \"definition\": \"(causal analysis) Influence; a phenomenon that affects the nature, the magnitude, and/or the timing of a consequence.\",\n                        \"synonyms\": [],\n                        \"antonyms\": [],\n                        \"example\": \"The launch temperature was a factor of the Challenger disaster.\"\n                    },\n                    {\n                        \"definition\": \"A resource used in the production of goods or services, a factor of production.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"A steward or bailiff of an estate.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            },\n            {\n                \"partOfSpeech\": \"verb\",\n                \"definitions\": [\n                    {\n                        \"definition\": \"To find all the factors of (a number or other mathematical object) (the objects that divide it evenly).\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(of a number or other mathematical object) To be a product of other objects.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    },\n                    {\n                        \"definition\": \"(commercial) To sell a debt or debts to an agent (the factor) to collect.\",\n                        \"synonyms\": [],\n                        \"antonyms\": []\n                    }\n                ],\n                \"synonyms\": [],\n                \"antonyms\": []\n            }\n        ],\n        \"license\": {\n            \"name\": \"CC BY-SA 3.0\",\n            \"url\": \"https://creativecommons.org/licenses/by-sa/3.0\"\n        },\n        \"sourceUrls\": [\n            \"https://en.wiktionary.org/wiki/factor\",\n            \"https://en.wiktionary.org/wiki/factors\"\n        ]\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "word",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

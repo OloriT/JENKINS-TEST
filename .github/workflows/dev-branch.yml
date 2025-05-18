@@ -15,3 +15,15 @@ jobs:
       - run: echo "Triggered by a ${{ github.event_name }} on ${{ matrix.os }}"
 
       - run: python demo.py
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Postman Collection
+        run: |
+          newman run dictionaryapi.postman_collection.json
